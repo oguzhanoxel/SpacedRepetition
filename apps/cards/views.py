@@ -9,7 +9,7 @@ class CardSerializer(serializers.ModelSerializer):
     )
     class Meta:
         model = Card
-        fields = ('id', 'deck', 'question', 'answer')
+        fields = ('id', 'deck', 'question', 'answer', 'created_at', 'updated_at')
 
 class CardViewSet(viewsets.ModelViewSet):
     queryset = Card.objects.all()
